@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+  
+    <title>Карточки цветов</title>
+  
+  <link rel="stylesheet">
+</head>
+<body>
+  
+    <h1>Цветовая палитра в бордово-красных тонах</h1>
+    
+    <section class="flex-section">
+        <h2>Flexbox карточки</h2>
+      
+        <div class="flexic">
+            <div class="flexic-1">
+                <p>Бордовый</p>
+                <p>#800000</p>
+            </div>
+            <div class="flexic-2">
+                <p>Тёмно-красный</p>
+                <p>#8B0000</p>
+            </div>
+            <div class="flexic-3">
+                <p>Коричнево-малиновый</p>
+                <p>#800020</p>
+            </div>
+            <div class="flexic-4">
+                <p>Кардинал</p>
+                <p>#C41E3A</p>
+            </div>
+            <div class="flexic-5">
+                <p>Рубиновый</p>
+                <p>#9B111E</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="grid-section">
+        <h2>Grid карточки</h2>
+        <div class="gridik">
+            <div class="gridik-1">
+                <p>Бургундский</p>
+                <p>#900020</p>
+            </div>
+            <div class="gridik-2">
+                <p>Винный</p>
+                <p>#722F37</p>
+            </div>
+            <div class="gridik-3">
+                <p>Малиновый</p>
+                <p>#DC143C</p>
+            </div>
+            <div class="gridik-4">
+                <p>Киноварь</p>
+                <p>#E34234</p>
+            </div>
+            <div class="gridik-5">
+                <p>Терракотовый</p>
+                <p>#E2725B</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

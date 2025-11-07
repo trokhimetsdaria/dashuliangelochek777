@@ -1,0 +1,65 @@
+body {
+    background-color: #f8f1f1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #5a0e1a;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.flex-section, .grid-section {
+    margin-bottom: 40px;
+}
+
+.flexic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    background: #f0e6e6;
+    padding:  20px;
+    border-radius: 10px;
+}
+
+.gridik {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 178px;
+    padding: 20px;
+    background: #f0e6e6;
+    border-radius: 10px;
+}
+
+.flexic-1, .flexic-2, .flexic-3, .flexic-4, .flexic-5,
+.gridik-1, .gridik-2, .gridik-3, .gridik-4, .gridik-5 {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.flexic-1 { background-color: #800000; }
+.flexic-2 { background-color: #8B0000; }
+.flexic-3 { background-color: #800020; }
+.flexic-4 { background-color: #C41E3A; }
+.flexic-5 { background-color: #9B111E; }
+
+.gridik-1 { background-color: #900020; }
+.gridik-2 { background-color: #722F37; }
+.gridik-3 { background-color: #DC143C; }
+.gridik-4 { background-color: #E34234; }
+.gridik-5 { background-color: #E2725B; }

@@ -1,1 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.header {
+  background: #141414;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #eee;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #eee;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.hero {
+  background: #141414;
+  color: white;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  line-height: 1;
+}
+
+.hero-right ul {
+  list-style: none;
+}
+
+.hero-right li {
+  margin-bottom: 10px;
+}
+
+.hero-bottom img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.hero-bottom p {
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+.clients {
+  margin: 40px 0;
+  padding: 30px 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.client-card {
+  background: #141414;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+
+.services {
+  margin: 40px 0;
+  padding: 30px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: #141414;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+
+.projects {
+  margin: 40px 0;
+  padding: 30px 0;
+}
+
+.projects-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.projects h2 {
+  font-size: 50px;
+}
+
+.projects-list {
+  display: flex;
+  gap: 20px;
+}
+
+.project-item {
+  padding: 10px 0;
+}
+
+
+.contact {
+  margin: 40px 0;
+  padding: 30px 0;
+  background: #141414;
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid #eee;
+}
+
+.contact-content {
+  max-width: 500px;
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-info div {
+  margin-bottom: 8px;
+}
+
+
+.footer {
+  background: #141414;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .menu-btn {
+    display: block;
+  }
+  
+  .hero h1 {
+    font-size: 50px;
+  }
+  
+  .hero-top {
+    flex-direction: column;
+  }
+  
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .projects-list {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* СГЕНЕРИРОВАНО тк как я поняла, это для анимаций */
+
+/* Плавные переходы для интерактивных элементов */
+.client-card, .service-card, .project-item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.client-card:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transition: left 0.3s ease;
+}
+
+.project-item:hover::after {
+  left: 0;
+}
+
+/* Анимация для кнопки меню */
+.menu-btn {
+  transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Анимация появления элементов */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Анимация для hero section */
+.hero-bottom p {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bottom p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.5s ease;
+}
+
+.hero-bottom p:hover::after {
+  width: 100%;
+}
+
+/* Добавьте эти стили в конец вашего CSS файла */
+
+/* Анимации для скролла */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px) rotateX(45deg);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+/* Эффекты для карточек */
+.client-card, .service-card {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+}
+
+.client-card:hover, .service-card:hover {
+  border-color: rgba(255,255,255,0.3) !important;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(255,255,255,0.1),
+    inset 0 0 50px rgba(255,255,255,0.05) !important;
+}
+
+/* Анимация для проектов */
+.project-item {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-item:hover::before {
+  left: 100%;
+}
+
+.project-item:hover {
+  transform: translateX(10px);
+  color: #fff;
+}
+
+/* Анимация для героя */
+.hero h1 {
+  background: linear-gradient(45deg, #fff, #aaa, #fff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Анимация для точек в заголовках */
+.section-title span {
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* Эффект стекла для header */
+.header {
+  background: rgba(20, 20, 20, 0.8) !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(10, 10, 10, 0.95) !important;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Анимация для кнопки меню */
+.menu-btn {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+
+/* Адаптивность для анимаций */
+@media (max-width: 768px) {
+  .custom-cursor, .cursor-follower {
+    display: none;
+  }
+  
+  .client-card, .service-card {
+    transform: none !important;
+  }
+}

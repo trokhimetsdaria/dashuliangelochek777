@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INVO Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <header class="header">
+      <div class="container">
+        <div class="logo">INVO</div>
+        <nav class="nav">
+          <a href="about">Studio</a>
+          <a href="services">Services</a>
+          <a href="projects">Projects</a>
+          <a href="blog">Blog</a>
+          <a href="contact">Contact</a>
+        </nav>
+        <button class="menu-btn">☰</button>
+      </div>
+    </header>
+
+
+    <main class="main container">
+      
+      <section class="hero">
+        <div class="hero-top">
+          <div class="hero-left">
+            <h1>INVO</h1>
+            <p>Studio</p>
+          </div>
+          <div class="hero-right">
+            <ul>
+              <li>Branding</li>
+              <li>Social Media</li>
+              <li>Web Design</li>
+              <li>SEO</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+       
+          <p>Мы создаем инструменты и стратегии для роста вашего бизнеса</p>
+          <span>© 2025 INVO Studio</span>
+        </div>
+      </section>
+
+
+      <section class="clients">
+        <div class="section-title">
+          <span>●</span>
+          <h2>Our clients</h2>
+          <span>(2016–25)</span>
+        </div>
+        <div class="clients-grid">
+          <div class="client-card">Morgan Stanley</div>
+          <div class="client-card">BlackRock</div>
+          <div class="client-card">Goldman Sachs</div>
+          <div class="client-card">Финам</div>
+          <div class="client-card">Альфа-Капитал</div>
+          <div class="client-card">Сколково</div>
+        </div>
+      </section>
+
+   
+      <section class="services">
+        <div class="section-title">
+          <span>●</span>
+          <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Branding</h3>
+            <p>Создаем уникальный стиль для вашего бренда</p>
+          </div>
+          <div class="service-card">
+            <h3>Web Design</h3>
+            <p>Разрабатываем современные и удобные сайты</p>
+          </div>
+          <div class="service-card">
+            <h3>Social Media</h3>
+            <p>Продвигаем ваш бренд в социальных сетях</p>
+          </div>
+        </div>
+      </section>
+
+ 
+      <section class="projects">
+        <div class="projects-header">
+          
+          <span>(27)</span>
+          <h2>Projects</h2>
+          <p>Наши последние проекты</p>
+        </div>
+        <div class="projects-list">
+          <div class="project-item">Boltshift / 2025</div>
+          <div class="project-item">Ephemeral / 2025</div>
+          <div class="project-item">Other Project / 2024</div>
+        </div>
+      </section>
+
+
+      <section class="contact">
+        <div class="section-title">
+          <span>●</span>
+          <h2>Contact Us</h2>
+        </div>
+        <div class="contact-content">
+          <p>Готовы начать проект? Напишите нам!</p>
+          <div class="contact-info">
+            <div>Email: hello@invo.ru</div>
+            <div>Phone: +7 999 123 45 67</div>
+            <div>Address: Москва, ул. Примерная, 15</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>© INVO - студия визуального дизайна</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

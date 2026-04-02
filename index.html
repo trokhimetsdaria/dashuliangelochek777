@@ -1,123 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Магазин</title>
-    <!-- Подключаем таблицу стилей -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mono Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Шапка сайта с названием и кнопкой смены темы -->
-    <header class="header">
-        <div class="container header-content">
-            <h1 class="logo">Мой Магазин</h1>
-            <button id="theme-btn">Сменить тему</button>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container header__inner">
+      <h1 class="logo">Mono Store</h1>
+      <div class="header__right">
+        <p class="cart">В корзине: <span id="cart-count">0</span></p>
+        <button class="theme-btn" id="theme-btn">Темная тема</button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Обложка с текстом и кнопкой -->
+  <main>
     <section class="hero">
-        <div class="container hero-content">
-            <h2>Добро пожаловать!</h2>
-            <p>Простые и полезные товары для каждого.</p>
-            <button class="hero-btn">Подробнее</button>
-        </div>
+      <div class="container hero__inner">
+        <p class="hero__label">Минималистичный магазин</p>
+        <h2 class="hero__title">Простые вещи на каждый день</h2>
+        <p class="hero__text">Аккуратный учебный сайт с корзиной, сменой темы и простым интерактивом на JavaScript.</p>
+        <a href="#products" class="hero__button">Подробнее</a>
+      </div>
     </section>
 
-    <!-- Блок товаров -->
-    <section class="products">
-        <div class="container">
-            <h2 class="section-title">Товары</h2>
-            <div class="cart-status">В корзине: <span id="cart-count">0</span></div>
-            <div class="product-grid">
-                <!-- Карточка товара 1 -->
-                <article class="product">
-                    <img src="https://via.placeholder.com/150" alt="Блокнот">
-                    <h3>Блокнот</h3>
-                    <p class="price">150&nbsp;₽</p>
-                    <div class="product-actions">
-                        <button class="buy-btn">В корзину</button>
-                        <button class="minus-btn">−</button>
-                    </div>
-                </article>
-                <!-- Карточка товара 2 -->
-                <article class="product">
-                    <img src="https://via.placeholder.com/150" alt="Кружка">
-                    <h3>Кружка</h3>
-                    <p class="price">300&nbsp;₽</p>
-                    <div class="product-actions">
-                        <button class="buy-btn">В корзину</button>
-                        <button class="minus-btn">−</button>
-                    </div>
-                </article>
-                <!-- Карточка товара 3 -->
-                <article class="product">
-                    <img src="https://via.placeholder.com/150" alt="Растение">
-                    <h3>Растение</h3>
-                    <p class="price">450&nbsp;₽</p>
-                    <div class="product-actions">
-                        <button class="buy-btn">В корзину</button>
-                        <button class="minus-btn">−</button>
-                    </div>
-                </article>
-                <!-- Карточка товара 4 -->
-                <article class="product">
-                    <img src="https://via.placeholder.com/150" alt="Наушники">
-                    <h3>Наушники</h3>
-                    <p class="price">800&nbsp;₽</p>
-                    <div class="product-actions">
-                        <button class="buy-btn">В корзину</button>
-                        <button class="minus-btn">−</button>
-                    </div>
-                </article>
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title">Товары</h2>
+
+        <div class="products-grid">
+          <article class="card">
+            <div class="card__image">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <rect x="30" y="18" width="52" height="78" rx="4"></rect>
+                <line x1="42" y1="32" x2="72" y2="32"></line>
+                <line x1="42" y1="42" x2="72" y2="42"></line>
+                <line x1="42" y1="52" x2="66" y2="52"></line>
+                <line x1="84" y1="24" x2="94" y2="98"></line>
+              </svg>
             </div>
+            <h3 class="card__title">Блокнот</h3>
+            <p class="card__price">150 ₽</p>
+            <div class="card__actions">
+              <button class="buy-btn">В корзину</button>
+              <button class="minus-btn">-</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__image">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <rect x="34" y="38" width="40" height="32" rx="6"></rect>
+                <path d="M74 44h12c7 0 12 5 12 12s-5 12-12 12H74"></path>
+                <line x1="40" y1="74" x2="68" y2="74"></line>
+              </svg>
+            </div>
+            <h3 class="card__title">Кружка</h3>
+            <p class="card__price">300 ₽</p>
+            <div class="card__actions">
+              <button class="buy-btn">В корзину</button>
+              <button class="minus-btn">-</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__image">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <path d="M60 22c10 10 12 22 0 34"></path>
+                <path d="M48 30c8 10 10 20 2 32"></path>
+                <path d="M72 30c-8 10-10 20-2 32"></path>
+                <rect x="42" y="66" width="36" height="22" rx="4"></rect>
+              </svg>
+            </div>
+            <h3 class="card__title">Растение</h3>
+            <p class="card__price">450 ₽</p>
+            <div class="card__actions">
+              <button class="buy-btn">В корзину</button>
+              <button class="minus-btn">-</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__image">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <path d="M34 54a18 18 0 0 1 18-18h16a18 18 0 0 1 18 18"></path>
+                <rect x="26" y="50" width="20" height="28" rx="10"></rect>
+                <rect x="74" y="50" width="20" height="28" rx="10"></rect>
+              </svg>
+            </div>
+            <h3 class="card__title">Наушники</h3>
+            <p class="card__price">800 ₽</p>
+            <div class="card__actions">
+              <button class="buy-btn">В корзину</button>
+              <button class="minus-btn">-</button>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Дополнительный элемент на JS: случайный совет -->
-    <section class="extra">
-        <div class="container extra-content">
-            <h2>Случайный совет</h2>
-            <p id="advice-text">Улыбайтесь! Это улучшит настроение и поможет справиться с трудностями.</p>
-            <button id="advice-btn">Показать другой совет</button>
-        </div>
+    <section class="feature">
+      <div class="container feature__inner">
+        <h2 class="section-title">Случайная фраза дня</h2>
+        <p class="feature__text" id="quote-text">Иногда простой сайт - уже хорошее решение.</p>
+        <button class="feature__button" id="quote-btn">Поменять фразу</button>
+      </div>
     </section>
 
-    <!-- Блок формы с пятью вопросами -->
     <section class="form-section">
-        <div class="container form-container">
-            <h2>Форма обратной связи</h2>
-            <form id="contact-form">
-                <label>1. Как вас зовут?
-                    <input type="text" name="name" placeholder="Введите имя">
-                </label>
-                <label>2. Сколько вам лет?
-                    <input type="number" name="age" placeholder="Введите возраст">
-                </label>
-                <label>3. Ваша оценка магазину?
-                    <input type="number" name="rating" placeholder="От 1 до 5">
-                </label>
-                <label>4. Откуда вы?
-                    <input type="text" name="location" placeholder="Укажите город">
-                </label>
-                <label>5. Ваш отзыв
-                    <textarea name="message" placeholder="Напишите отзыв..." rows="3"></textarea>
-                </label>
-                <button type="submit" class="submit-btn">Отправить</button>
-            </form>
-        </div>
+      <div class="container">
+        <h2 class="section-title">Форма обратной связи</h2>
+        <form class="form" id="feedback-form">
+          <label class="form__label">
+            1. Как вас зовут?
+            <input class="form__input" type="text" placeholder="Введите имя" required>
+          </label>
+
+          <label class="form__label">
+            2. Сколько вам лет?
+            <input class="form__input" type="number" placeholder="Введите возраст" required>
+          </label>
+
+          <label class="form__label">
+            3. Из какого вы города?
+            <input class="form__input" type="text" placeholder="Введите город" required>
+          </label>
+
+          <label class="form__label">
+            4. Какой товар вам понравился?
+            <input class="form__input" type="text" placeholder="Напишите товар" required>
+          </label>
+
+          <label class="form__label">
+            5. Ваш отзыв о магазине
+            <textarea class="form__textarea" placeholder="Напишите отзыв" required></textarea>
+          </label>
+
+          <button class="form__button" type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
+  </main>
 
-    <!-- Подвал сайта -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Мой Магазин. Все права защищены.</p>
-            <p>Спасибо, что выбрали нас!</p>
-        </div>
-    </footer>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Mono Store</p>
+      <p>Учебный проект - HTML, CSS, JS</p>
+    </div>
+  </footer>
 
-    <!-- Подключаем скрипт -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

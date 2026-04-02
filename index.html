@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Магазин</title>
+    <!-- Подключаем таблицу стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта с названием и кнопкой смены темы -->
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">Мой Магазин</h1>
+            <button id="theme-btn">Сменить тему</button>
+        </div>
+    </header>
+
+    <!-- Обложка с текстом и кнопкой -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Добро пожаловать!</h2>
+            <p>Простые и полезные товары для каждого.</p>
+            <button class="hero-btn">Подробнее</button>
+        </div>
+    </section>
+
+    <!-- Блок товаров -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Товары</h2>
+            <div class="cart-status">В корзине: <span id="cart-count">0</span></div>
+            <div class="product-grid">
+                <!-- Карточка товара 1 -->
+                <article class="product">
+                    <img src="https://via.placeholder.com/150" alt="Блокнот">
+                    <h3>Блокнот</h3>
+                    <p class="price">150&nbsp;₽</p>
+                    <div class="product-actions">
+                        <button class="buy-btn">В корзину</button>
+                        <button class="minus-btn">−</button>
+                    </div>
+                </article>
+                <!-- Карточка товара 2 -->
+                <article class="product">
+                    <img src="https://via.placeholder.com/150" alt="Кружка">
+                    <h3>Кружка</h3>
+                    <p class="price">300&nbsp;₽</p>
+                    <div class="product-actions">
+                        <button class="buy-btn">В корзину</button>
+                        <button class="minus-btn">−</button>
+                    </div>
+                </article>
+                <!-- Карточка товара 3 -->
+                <article class="product">
+                    <img src="https://via.placeholder.com/150" alt="Растение">
+                    <h3>Растение</h3>
+                    <p class="price">450&nbsp;₽</p>
+                    <div class="product-actions">
+                        <button class="buy-btn">В корзину</button>
+                        <button class="minus-btn">−</button>
+                    </div>
+                </article>
+                <!-- Карточка товара 4 -->
+                <article class="product">
+                    <img src="https://via.placeholder.com/150" alt="Наушники">
+                    <h3>Наушники</h3>
+                    <p class="price">800&nbsp;₽</p>
+                    <div class="product-actions">
+                        <button class="buy-btn">В корзину</button>
+                        <button class="minus-btn">−</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Дополнительный элемент на JS: случайный совет -->
+    <section class="extra">
+        <div class="container extra-content">
+            <h2>Случайный совет</h2>
+            <p id="advice-text">Улыбайтесь! Это улучшит настроение и поможет справиться с трудностями.</p>
+            <button id="advice-btn">Показать другой совет</button>
+        </div>
+    </section>
+
+    <!-- Блок формы с пятью вопросами -->
+    <section class="form-section">
+        <div class="container form-container">
+            <h2>Форма обратной связи</h2>
+            <form id="contact-form">
+                <label>1. Как вас зовут?
+                    <input type="text" name="name" placeholder="Введите имя">
+                </label>
+                <label>2. Сколько вам лет?
+                    <input type="number" name="age" placeholder="Введите возраст">
+                </label>
+                <label>3. Ваша оценка магазину?
+                    <input type="number" name="rating" placeholder="От 1 до 5">
+                </label>
+                <label>4. Откуда вы?
+                    <input type="text" name="location" placeholder="Укажите город">
+                </label>
+                <label>5. Ваш отзыв
+                    <textarea name="message" placeholder="Напишите отзыв..." rows="3"></textarea>
+                </label>
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Мой Магазин. Все права защищены.</p>
+            <p>Спасибо, что выбрали нас!</p>
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>

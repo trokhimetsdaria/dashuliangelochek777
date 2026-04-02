@@ -1,63 +1,54 @@
-// Скрипт для переключения темы, управления корзиной и генерации случайных советов
-
-// Переключатель темы
 const themeBtn = document.getElementById('theme-btn');
-themeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-});
-
-// Управление корзиной
-let cartCount = 0;
-const cartCountSpan = document.getElementById('cart-count');
-
-// Функция для обновления отображаемого количества товаров
-function updateCartDisplay() {
-    cartCountSpan.textContent = cartCount;
-}
-
-// Добавляем обработчики к кнопкам покупки и уменьшения
+const cartCount = document.getElementById('cart-count');
 const buyButtons = document.querySelectorAll('.buy-btn');
 const minusButtons = document.querySelectorAll('.minus-btn');
+const quoteBtn = document.getElementById('quote-btn');
+const quoteText = document.getElementById('quote-text');
+const feedbackForm = document.getElementById('feedback-form');
 
-buyButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        cartCount += 1;
-        updateCartDisplay();
-    });
+let count = 0;
+
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+
+  if (document.body.classList.contains('dark-theme')) {
+    themeBtn.textContent = 'Светлая тема';
+  } else {
+    themeBtn.textContent = 'Темная тема';
+  }
 });
 
-minusButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        if (cartCount > 0) {
-            cartCount -= 1;
-            updateCartDisplay();
-        }
-    });
+buyButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    count++;
+    cartCount.textContent = count;
+  });
 });
 
-// Случайные советы
-const adviceBtn = document.getElementById('advice-btn');
-const adviceText = document.getElementById('advice-text');
+minusButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (count > 0) {
+      count--;
+      cartCount.textContent = count;
+    }
+  });
+});
 
-const adviceList = [
-    'Улыбайтесь! Это улучшит настроение и поможет справиться с трудностями.',
-    'Не забывайте отдыхать — восстановление важно для продуктивности.',
-    'Пейте достаточно воды в течение дня.',
-    'Ставьте маленькие цели, чтобы постепенно двигаться к большой мечте.',
-    'Окружайте себя людьми, которые вас поддерживают.',
-    'Пробуйте новое — развитие начинается за пределами зоны комфорта.',
-    'Будьте благодарны за маленькие радости каждый день.'
+const quotes = [
+  'Иногда простой сайт - уже хорошее решение.',
+  'Минимализм - это когда ничего лишнего не мешает главному.',
+  'Аккуратная структура - половина хорошей верстки.',
+  'Черно-белый дизайн - безопасная классика для учебного проекта.',
+  'Сначала работает - потом усложняем.'
 ];
 
-adviceBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * adviceList.length);
-    adviceText.textContent = adviceList[randomIndex];
+quoteBtn.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  quoteText.textContent = quotes[randomIndex];
 });
 
-// Простая валидация формы (не отправляем данные на сервер, а выводим сообщение)
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    alert('Спасибо за ваш отзыв!');
-    contactForm.reset();
+feedbackForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  alert('Форма отправлена');
+  feedbackForm.reset();
 });
